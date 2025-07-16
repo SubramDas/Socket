@@ -6,10 +6,14 @@
 class ClientApp {
 private:
     ClientInterface& client;
+    void processClientRequests();
 
 public:
-    explicit ClientApp(ClientInterface& networkClient);
-    void run(); // needs a return type
+    // Prevents unexpected conversions in case of complex objects
+    explicit ClientApp(ClientInterface& networkClient); 
+    
+    // needs a return type
+    void run(); 
 };
 
 #endif // CLIENTAPP_H

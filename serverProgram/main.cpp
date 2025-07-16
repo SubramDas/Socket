@@ -1,10 +1,11 @@
 #include "serverSocket.h"
 #include "serverApp.h"
 #include <iostream>
+#include "../common/configurations.h"
 
 int main() {
     try{
-        SocketServer server(2001);  // Match this with client port
+        SocketServer server(SERVER_PORT);  
         ServerApp app(server);
         app.run();
 

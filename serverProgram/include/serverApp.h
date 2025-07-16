@@ -8,7 +8,7 @@ private:
     ServerInterface& server;
 
 public:
-    explicit ServerApp(ServerInterface& srv);
+    ServerApp(ServerInterface& srv);
     void run();
 };
 

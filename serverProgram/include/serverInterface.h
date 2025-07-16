@@ -1,8 +1,11 @@
 #ifndef ISERVER_H
 #define ISERVER_H
+
 // Guards
 // "Redefinition of class"
 // "Function already defined"
+
+#include "../../common/common.h"
 
 class ServerInterface {
 public:
