@@ -1,4 +1,5 @@
 #include "clientApp.h"
+#include "../../common/configurations.h"
 #include <iostream>
 
 using namespace std;
@@ -6,25 +7,26 @@ using namespace std;
 ClientApp::ClientApp(ClientInterface& networkClient) : client(networkClient) {}
 
 void ClientApp::run() {
-    client.connectToServer("127.0.0.1", 2001);
-    
-    // if (!client.connectToServer("127.0.0.1", 2001)) {
-    //     cerr << "Unable to connect to server.\n";
-    //     return;
-    // }
+    client.connectToServer(SERVER_IP, SERVER_PORT);
 
-    while (true) {
-        TestStruct inputData{};
+    while(true){
+       processClientRequests();
+    }
+}
+
+void ClientApp::processClientRequests(){
+        
+        // Initialize with 0 values
+        TestStruct inputData{}; 
+        ResultStruct result{};
+        
         cout << "Enter a: ";
         cin >> inputData.a;
         cout << "Enter b: ";
-        cin >> inputData.b;
+        cin >> inputData.b ;
 
-        if (!client.sendData(inputData)) break;
-
-        ResultStruct result{};
-        if (!client.receiveData(result)) break;
-
+        client.sendData(inputData);
+        client.receiveData(result);
+        
         cout << "Result: " << result.c << "\n";
-    }
 }
