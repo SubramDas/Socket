@@ -1,0 +1,43 @@
+Problem Statement: 
+
+You will be shared an Excel File with Structured Command Data from a certain platform. You need to create a conversational interface that uses data from the file to answer user questions and generate Test Scripts. 
+
+ 
+
+Functional Requirements: 
+
+User should be able to interact with the Chatbot via a Web Interface. 
+
+Chatbot should provide responses using context from the Excel Sheet wherever applicable.  
+
+Chat conversations should have memory (previous user messages should be used in context for subsequent responses). 
+
+Chatbot should mainly cover 3 scenarios -  
+i. Command Suggestions for specific use cases (“What command should I use to do …”) 
+ii. Complete Script generation (“Generate a test script to do ….”) 
+iii. QA over command syntax/semantics (“What parameters to put for … command”, etc) 
+ 
+Scenarios outside of these, or irrelevant questions should be handled with an error. 
+
+(Bonus): 
+
+Use Agentic AI-based implementation. Create a central chat agent with individual tools for context retrieval and response generation. 
+
+Take input in the form of a Test Case  
+(for example:  
+1. User should click on Maps 
+2. User should click on Search 
+3. User should perform scroll 
+…) and generate a Test Script with appropriate commands and parameters for all the Test Steps. 
+
+ 
+
+Technical Requirements: 
+
+Use Llama-3 using KGPT API as the LLM.  
+
+Use nomic-embed-text hosted on KGPT as the Embeddings model. 
+
+Use FAISS for the VectorDB. 
+
+Use Streamlit for the Web Interface. 
