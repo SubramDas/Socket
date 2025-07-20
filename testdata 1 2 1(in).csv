@@ -1,0 +1,37 @@
+Command Name,Variant,Arguments (Argument DataTypes),Command Functionality,Command Pre-requisites,Command Type
+CLICK_BY_ID,1,WIDGET_ID(string),Uses Appium to click at an Android Widget based on Widget_ID,SET_DEVICE,Action
+CLICK,1,"X(int), Y(int)","Uses Appium to click at given X, Y coordinates.",SET_DEVICE,Action
+CLICK,2,"X(int), Y(int), PressDuration(msec)(int)","Uses Appium to click at given X, Y coordinates for a particular duration of time.",SET_DEVICE,Action
+CLICK,3,"X(int), Y(int), resetArm(boolean)","Uses Robot to click at given X, Y coordinates. ResetArm parameter defines whether Robotic arm should reset to default position post action.",SET_DEVICE,Action
+CLICK_BY_TEXT,1,Text(string),Uses Appium to click at particular text on the screen.,SET_DEVICE,Action
+CLICK_BY_TEXT,2,"CapturedImagePath(String), Text(String)",Uses Appium to click at particular text on the filepath of a Captured Image.,SET_DEVICE,Action
+CLICK_BY_TEXT,3,"Text(string ), resetArm(boolean)",Uses Robot to click at particular text on the screen. ResetArm parameter defines whether Robotic arm should reset to default position post action.,SET_DEVICE,Action
+CLICK_LISTITEM_BY_TEXT,1,"List_ID(string), TEXT(string), child_WidgetId(string)",Uses Appium to click on particular text on a list (defined by List_ID) and Child WidgetID.,SET_DEVICE,Action
+CLICK_LISTITEM_BY_TEXT,2,"List_ID(string), TEXT(string), Timeout(int)",Uses Appium to click on particular text on a list (defined by List_ID) with specified Timeout.,SET_DEVICE,Action
+CLICK_LISTITEM_BY_TEXT,3,"List_ID(string), TEXT(string)",Uses Appium to click on particular text on a list (defined by List_ID).,SET_DEVICE,Action
+CLICK_LISTITEM_BY_ID,1,"List-id(string), reference-widget-id(string), child-widget-id(string)",Uses Appium to click on List Item (defined by ListID) for a particular Reference Widget ID and Child Widget ID.,SET_DEVICE,Action
+FLING,2,"Widget_ID(string), Scroll_To(string)",Uses Appium to scroll to a particular Widget ID.,SET_DEVICE,Action
+LONG_PRESS_BY_TEXT,1,TEXT(string),Uses Appium to long press at a particular text on the screen.,SET_DEVICE,Action
+LONG_PRESS_BY_TEXT,2,"TEXT(string), Duration(int)",Uses Appium to long press at a particular text on the screen for a specific duration of time.,SET_DEVICE,Action
+LONG_PRESS_BY_ID,1,Widget_ID(string),Uses Appium to long press at a particular element on the screen by Widget ID.,SET_DEVICE,Action
+LONG_PRESS_BY_ID,2,"Widget_ID(string), Duration(int)",Uses Appium to long press at a particular element on the screen by Widget ID for a specific duration of time.,SET_DEVICE,Action
+LONG_PRESS,1,"X(int), Y(int)","Uses Robot to long press at given X, Y coordinates.",SET_DEVICE,Action
+LONG_PRESS,2,"X(int), Y(int), Duration(int)","Uses Robot to long press at given X, Y coordinates for a specific duration of time.",SET_DEVICE,Action
+LONG_PRESS,3,"X(int), Y(int), resetArm(boolean)","Uses Robot to long press at given X, Y coordinates. ResetArm parameter defines whether Robotic arm should reset to default position post action.",SET_DEVICE,Action
+PINCH_CLOSE,1,"Widget_ID(string), Zoom Percentage(int), Zoom Rate(int)","Uses Appium to pinch close (Zoom out) the screen by WidgetID, and takes Zoom Percentage and Zoom Rate as inputs.",SET_DEVICE,Action
+PINCH_CLOSE,2,"startX1(int), startY1(int), startX2(int), startY2(int), zoomRate(int)","Uses Appium to pinch close (Zoom out) the screen by startX1, startX2, startY1, startY2 coordinates, and takes Zoom Rate as input.",SET_DEVICE,Action
+PINCH_OPEN,1,"Widget_ID(string), Zoom Percentage(int), Zoom Rate(int)","Uses Appium to pinch open (Zoom in) the screen by WidgetID, and takes Zoom Percentage and Zoom Rate as inputs.",SET_DEVICE,Action
+PINCH_OPEN,2,"X(int), Y(int), zoomRate(int)","Uses Appium to pinch open (Zoom in) the screen by X, Y coordinates and Zoom Rate as inputs.",SET_DEVICE,Action
+RANDOM_CLICK,1,"no of clicks(int), Interval between clicks(int)","Uses Appium to click a random location on the screen, and takes number of clicks and time interval between clicks as inputs.",SET_DEVICE,Action
+SCROLL_TO_TEXT,1,"Widget_ID(string), TEXT(string)",Uses Appium to scroll to a particular text in a particular widget defined by WidgetID.,SET_DEVICE,Action
+SCROLL_TO_TEXT,2,"xPath(string), Text(string)",Uses Appium to scroll to a particular text in a particular element defined by Xpath.,SET_DEVICE,Action
+SCROLL,1,"Start x(int), Start y(int), End x(int), End y(int), Speed(int)","Uses Appium to scroll from Start x, Start y to End x, End y at a defined Speed.",SET_DEVICE,Action
+SCROLL,2,"Start x(int), Start y(int), End x(int), End y(int)","Uses Appium to scroll from Start x, Start y to End x, End y at a default speed.",SET_DEVICE,Action
+SET_DEVICE,1,Device_ID(string),Sets a particular Device_ID as active DUT to be used for subsequent commands.,,Action
+SET_DEVICE,2,"device(String), subDevice(String)",Sets a particular Device_ID as active DUT and another Device_ID as subdevice to be used for subsequent commands.,,Action
+SWIPE,1,"Start x(int), Start y(int), End x(int), End y(int), Speed(int)","Uses Appium to Swipe from Start x, Start y to End x, End y at a defined Speed.",SET_DEVICE,Action
+SWIPE,2,"Widget_ID(string), Scroll_To(string), Speed(int)","Uses Appium to Swipe to a defined element in a given Widget_ID, at a defined speed.",SET_DEVICE,Action
+SWIPE,3,"Widget_ID(string), Scroll_To(string)","Uses Appium to Swipe to a defined element in a given Widget_ID, at a default speed.",SET_DEVICE,Action
+SWIPE,4,"xPath(string), Scroll_To(string)","Uses Appium to Swipe to a defined string in a given element defined by Xpath, at a default speed.",SET_DEVICE,Action
+SWIPE,5,"xPath(string), Scroll_To(string), Speed(int)","Uses Appium to Swipe to a defined string in a given element defined by Xpath, at a defined speed.",SET_DEVICE,Action
+SWIPE,6,"Start x(int), Start y(int), End x(int), End y(int), Speed(int), resetArm(boolean)","Uses Robot to Swipe from a Start x, Start y to End x, End y. ResetArm defines whether Robotic Arm should reset to default position post action.",SET_DEVICE,Action
